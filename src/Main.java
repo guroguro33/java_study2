@@ -10,5 +10,26 @@ public class Main {
     String s = sb.toString();
     String[] a = s.split(",");
     System.out.println(a);
+
+    connectWords();
+  }
+
+  // 練習１−２
+  public static String connectWords(){
+    String folder = "c:¥javadev";
+    String file = "readme.txt";
+
+    if(!folder.matches(".*¥")){
+      StringBuilder sb = new StringBuilder(folder);
+      sb.append("¥");
+      folder = sb.toString();
+      System.out.println(sb);
+    }
+
+    String filePath = folder + file;
+
+    System.out.println(filePath);
+
+    return filePath;
   }
 }
