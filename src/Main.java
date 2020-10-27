@@ -12,6 +12,11 @@ public class Main {
     System.out.println(a);
 
     connectWords();
+
+    // 練習１−３
+    String str1 = ".*"; // 全ての文字列
+    String str2 = "A¥d{1,2}"; // １文字目がA、２文字目が数字、３文字目が数字かなし
+    String str3 = "U[A-Z]{3}"; // １文字目がU、２〜４文字目が英大文字
   }
 
   // 練習１−２
@@ -32,4 +37,5 @@ public class Main {
 
     return filePath;
   }
+
 }
