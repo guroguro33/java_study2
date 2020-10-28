@@ -1,3 +1,8 @@
+package jp.leaning.javastudy2;
+
+import java.util.Calendar;
+import java.util.Date;
+
 public class Main {
   public static void main(String[] args){
     // 練習1-1
@@ -11,15 +16,24 @@ public class Main {
     String[] a = s.split(",");
     System.out.println(a);
 
-    connectWords();
+    System.out.println(connectWords());
 
     // 練習１−３
     String str1 = ".*"; // 全ての文字列
     String str2 = "A¥d{1,2}"; // １文字目がA、２文字目が数字、３文字目が数字かなし
     String str3 = "U[A-Z]{3}"; // １文字目がU、２〜４文字目が英大文字
+
+    // 練習２−１
+    Date now = new Date();
+    Calendar cal = Calendar.getInstance();
+    // 取得した日時情報をCalendarにセット
+    cal.setTime(now);
+    
+
+
   }
 
-  // 練習１−２
+  // 練習１−２3
   public static String connectWords(){
     String folder = "c:¥javadev";
     String file = "readme.txt";
@@ -33,9 +47,6 @@ public class Main {
 
     String filePath = folder + file;
 
-    System.out.println(filePath);
-
     return filePath;
   }
-
 }
