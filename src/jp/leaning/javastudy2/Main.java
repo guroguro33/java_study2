@@ -1,5 +1,6 @@
 package jp.leaning.javastudy2;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -28,7 +29,15 @@ public class Main {
     Calendar cal = Calendar.getInstance();
     // 取得した日時情報をCalendarにセット
     cal.setTime(now);
-    
+    // 「日」の数値を取得
+    int day = cal.get(Calendar.DATE);
+    // 100日後をセットする
+    cal.add(Calendar.DAY_OF_MONTH, 100);
+    // Calendarの日付情報をDate型に変換します。
+    Date future = cal.getTime();
+    // 指定形式で表示
+    SimpleDateFormat sdf = new SimpleDateFormat("西暦yyyy年MM月dd日");
+    System.out.println(sdf.format(future));
 
 
   }
