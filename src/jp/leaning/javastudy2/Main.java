@@ -1,6 +1,8 @@
 package jp.leaning.javastudy2;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -38,6 +40,15 @@ public class Main {
     // 指定形式で表示
     SimpleDateFormat sdf = new SimpleDateFormat("西暦yyyy年MM月dd日");
     System.out.println(sdf.format(future));
+
+    // 練習2-2
+    // 現在日時を取得
+    LocalDate ld = LocalDate.now();
+    // 100日後をセットする
+    ld = ld.plusDays(100);
+    DateTimeFormatter f = DateTimeFormatter.ofPattern("西暦yyyy年MM月dd日");
+    String after = ld.format(f);
+    System.out.println(ld);
 
 
   }
