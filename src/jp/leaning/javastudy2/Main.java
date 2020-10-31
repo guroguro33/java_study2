@@ -3,8 +3,7 @@ package jp.leaning.javastudy2;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 public class Main {
   public static void main(String[] args){
@@ -49,6 +48,37 @@ public class Main {
     DateTimeFormatter f = DateTimeFormatter.ofPattern("西暦yyyy年MM月dd日");
     String after = ld.format(f);
     System.out.println(ld);
+
+    // リスト３−３　イテレータ
+    ArrayList<String> names = new ArrayList<>();
+    names.add("湊");
+    names.add("朝香");
+    names.add("菅原");
+    Iterator<String> it = names.iterator();
+    while(it.hasNext()){
+      String e = it.next(); //イテレータの矢印は0番目の手前になるので、1つ進める
+      System.out.println(e);
+    }
+
+    // リスト３−７　Map
+    Map<String, Integer> prefs = new HashMap<String, Integer>();
+    prefs.put("京都府", 255);
+    prefs.put("東京都", 1261);
+    prefs.put("熊本県", 181);
+    int tokyo = prefs.get("東京都");
+    System.out.println("東京都の人口は" + tokyo);
+    // prefs.remove("京都府");
+    // int kyoto = prefs.get("京都府");
+    prefs.put("熊本県", 182);
+    int kumamoto = prefs.get("熊本県");
+    System.out.println("熊本県の人口は" + kumamoto);
+
+    for(String key : prefs.keySet()){
+      int value = prefs.get(key);
+      System.out.println(key + "の人口は" + value);
+    }
+
+
 
 
   }
