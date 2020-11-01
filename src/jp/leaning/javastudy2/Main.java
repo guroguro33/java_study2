@@ -78,12 +78,23 @@ public class Main {
       System.out.println(key + "の人口は" + value);
     }
 
+    // 練習３−２
+    Hero saitou = new Hero("斎藤");
+    Hero suzuki = new Hero("鈴木");
+    List<Hero> heroList = new ArrayList<>();
+    heroList.add(saitou);
+    heroList.add(suzuki);
+    for(Hero h: heroList){
+      System.out.println(h.getName());
+    }
+
+
 
 
 
   }
 
-  // 練習１−２3
+  // 練習１−２３
   public static String connectWords(){
     String folder = "c:¥javadev";
     String file = "readme.txt";
@@ -99,4 +110,5 @@ public class Main {
 
     return filePath;
   }
+
 }
