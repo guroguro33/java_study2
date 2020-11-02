@@ -88,6 +88,15 @@ public class Main {
       System.out.println(h.getName());
     }
 
+    // 練習３−３
+    Map<Hero, Integer> heros = new HashMap<Hero, Integer>();
+    heros.put(saitou, 3);
+    heros.put(suzuki , 7);
+    for(Hero key : heros.keySet()){
+      Integer value = heros.get(key);
+      System.out.println(key.getName() + "が倒した敵 = " + value);
+    }
+
 
 
 
