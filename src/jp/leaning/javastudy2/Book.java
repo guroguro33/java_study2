@@ -2,7 +2,7 @@ package jp.leaning.javastudy2;
 
 import java.util.*;
 
-public class Book {
+public class Book implements Comparable<Book>{
   private String title;
   private Date publishDate;
   private String comment;
@@ -30,6 +30,10 @@ public class Book {
       return false;
     }
     return true;
+  }
+  // 練習４−１②
+  public int compareTo(Book b){
+    return this.publishDate.compareTo(b.publishDate);
   }
 
   public String getTitle() {
