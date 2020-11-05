@@ -2,7 +2,7 @@ package jp.leaning.javastudy2;
 
 import java.util.*;
 
-public class Book implements Comparable<Book>{
+public class Book implements Comparable<Book>, Cloneable{
   private String title;
   private Date publishDate;
   private String comment;
@@ -34,6 +34,15 @@ public class Book implements Comparable<Book>{
   // 練習４−１②
   public int compareTo(Book b){
     return this.publishDate.compareTo(b.publishDate);
+  }
+
+  // 練習４−１③
+  public Book clone(){
+    Book result = new Book();
+    result.title = this.title;
+    result.publishDate = (Date) this.publishDate.clone(); // なぜキャストしてclone?
+    result.comment = this.comment;
+    return result;
   }
 
   public String getTitle() {
