@@ -7,6 +7,13 @@ public class Book implements Comparable<Book>, Cloneable{
   private Date publishDate;
   private String comment;
 
+  public int hashCode(){
+    int result = 37; // 適当な初期値
+    result = result * 31 + title.hashCode();
+    result = result * 31 + publishDate.hashCode();
+    return result;
+  }
+
   public boolean equals(Object o) {
     // 等値だったらtrue
     if(this == o){
