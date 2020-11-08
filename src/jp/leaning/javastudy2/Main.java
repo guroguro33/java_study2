@@ -97,6 +97,10 @@ public class Main {
       System.out.println(key.getName() + "が倒した敵 = " + value);
     }
 
+    // 練習５
+    StrongBox<String> strongBox = new StrongBox<>(KeyType.PADLOCK);
+    System.out.println(strongBox);
+
 
 
 
