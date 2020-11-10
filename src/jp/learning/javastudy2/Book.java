@@ -1,4 +1,4 @@
-package jp.leaning.javastudy2;
+package jp.learning.javastudy2;
 
 import java.util.*;
 

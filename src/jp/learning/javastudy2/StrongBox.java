@@ -1,6 +1,4 @@
-package jp.leaning.javastudy2;
-
-import static jp.leaning.javastudy2.KeyType.*;
+package jp.learning.javastudy2;
 
 public class StrongBox<E> {
   // 練習５−１と５−２

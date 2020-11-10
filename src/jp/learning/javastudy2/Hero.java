@@ -1,4 +1,4 @@
-package jp.leaning.javastudy2;
+package jp.learning.javastudy2;
 
 // 練習３−２
 public class Hero {
