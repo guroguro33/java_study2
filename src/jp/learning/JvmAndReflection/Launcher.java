@@ -9,23 +9,30 @@ public class Launcher {
     String startUp = args[1];
 
     try{
+      // 受け取ったFQCNの名前を表示
       Class<?> clazz = Class.forName(fqcn);
       System.out.println(clazz);
+
+      // 使用中メモリ表示
       showMemory();
+
+      // FQCN内のメソッド表示
       listMethods(clazz);
 
-//      if(startUp.equals("E")){
-//
-//      }
-
+      // 第二引数startUpによる起動方法
+      if(startUp.equals("E")){
+        launchExternal(clazz);
+      } else if(startUp.equals("I")) {
+        launchInternal(clazz);
+      } else {
+        throw new IllegalArgumentException("起動方法の指定が不正です。");
+      }
 
     } catch(Exception e) {
       System.out.println(e.getMessage());
       e.printStackTrace();
       System.exit(1);
-
     }
-
   }
 
   // 使用中メモリ取得
@@ -43,6 +50,23 @@ public class Launcher {
     for(Method m : methods){
       System.out.println(m.getName());
     }
+  }
+
+  // 別プロセスで起動する
+  public static void launchExternal(Class<?> clazz) throws Exception {
+    ProcessBuilder pb = new ProcessBuilder(
+            "java", clazz.getName()
+    );
+    System.out.println(clazz.getName());
+    Process proc = pb.start();
+    proc.waitFor();
+  }
+
+  public static void launchInternal(Class<?> clazz) throws Exception {
+    Method m = clazz.getMethod("main", String[].class);
+    String[] args = {};
+    m.invoke(null, (Object)args);
+
   }
 
 }
