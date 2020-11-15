@@ -28,6 +28,9 @@ public class Launcher {
         throw new IllegalArgumentException("起動方法の指定が不正です。");
       }
 
+      showMemory();
+      System.exit(0);
+
     } catch(Exception e) {
       System.out.println(e.getMessage());
       e.printStackTrace();
@@ -57,13 +60,15 @@ public class Launcher {
     ProcessBuilder pb = new ProcessBuilder(
             "java", clazz.getName()
     );
+
     System.out.println(clazz.getName());
     Process proc = pb.start();
-    proc.waitFor();
+    proc.waitFor(); // プロセス終了まで待つ
   }
 
   public static void launchInternal(Class<?> clazz) throws Exception {
     Method m = clazz.getMethod("main", String[].class);
+
     String[] args = {};
     m.invoke(null, (Object)args);
 
