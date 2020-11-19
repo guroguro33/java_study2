@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class Main {
+  static int num = 36;
   public static void main(String[] args){
     List<String> list = List.of("A", "B", "C");
     list.forEach(str -> System.out.println(str));
@@ -32,5 +33,12 @@ public class Main {
       System.out.println("error");
 
     }
+
+    //396ページ
+    int num = Main.num;
+    System.out.println(num);
+
+    Sample a = new Sample();
+    a.sample();
   }
 }
