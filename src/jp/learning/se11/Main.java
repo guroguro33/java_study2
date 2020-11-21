@@ -50,5 +50,8 @@ public class Main {
       case 10: System.out.print("B");
         break;
     }
+
+    // 457ページ
+    System.out.println("10".hashCode());
   }
 }
