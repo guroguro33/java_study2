@@ -1,7 +1,9 @@
 package jp.learning.se11;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.function.Consumer;
+import static java.time.DayOfWeek.*;
 
 public class Main {
   static int num = 36;
@@ -53,5 +55,19 @@ public class Main {
 
     // 457ページ
     System.out.println("10".hashCode());
+
+    // 403ページ
+    var today = LocalDate.now().with(TUESDAY).getDayOfWeek();
+    switch(today){
+      case SUNDAY:
+      case SATURDAY:
+        System.out.println("weekend");
+        break;
+      case MONDAY:
+        case FRIDAY:
+        System.out.println("working");
+      default:
+        System.out.println("other");
+    }
   }
 }
