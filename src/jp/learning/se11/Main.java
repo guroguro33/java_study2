@@ -69,5 +69,16 @@ public class Main {
       default:
         System.out.println("other");
     }
+    System.out.println(today);
+
+    // 406ページ
+    int[][] array = {{1,2,3},{1,2,3}};
+    int[] array2 = {0,1};
+    int[][][] array3 = new int[2][2][2];
+    array3[0][0] = array2;
+    array3[0][1] = array2;
+    array3[1][0] = array2;
+    array3[1][1] = array2;
+    System.out.println(array3[0][0][1]);
   }
 }
