@@ -80,5 +80,6 @@ public class Main {
     array3[1][0] = array2;
     array3[1][1] = array2;
     System.out.println(array3[0][0][1]);
+
   }
 }
