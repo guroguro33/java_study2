@@ -20,5 +20,8 @@ public class Sample {
     Sample s = new Sample();
     s.setAll(10);
     System.out.println(s);
+
+    int f = 12_34_567;
+    System.out.println(f);
   }
 }
