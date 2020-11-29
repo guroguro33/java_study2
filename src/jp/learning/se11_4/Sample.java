@@ -23,5 +23,15 @@ public class Sample {
 
     int f = 12_34_567;
     System.out.println(f);
+
+    int x = 1;
+    int y = 3;
+    if(y > 2){
+      x = ++y;
+      y = x + 5;
+    } else {
+      y++;
+    }
+    System.out.println(x + ", " + y);
   }
 }
