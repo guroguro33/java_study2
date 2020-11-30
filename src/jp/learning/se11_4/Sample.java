@@ -16,6 +16,15 @@ public class Sample {
   public String toString(){
     return "Sample [a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + "]";
   }
+  // 440ページ
+  private String[] array;
+//  public Sample(String[] array){
+//    this.array = array;
+//  }
+  public Sample(String... array){
+    this.array = array;
+  }
+
   public static void main(String[] args){
     Sample s = new Sample();
     s.setAll(10);
@@ -24,6 +33,7 @@ public class Sample {
     int f = 12_34_567;
     System.out.println(f);
 
+    // 436ページ
     int x = 1;
     int y = 3;
     if(y > 2){
@@ -33,5 +43,6 @@ public class Sample {
       y++;
     }
     System.out.println(x + ", " + y);
+
   }
 }
