@@ -44,5 +44,17 @@ public class Sample {
     }
     System.out.println(x + ", " + y);
 
+    // 442ページ
+    String[][] array = new String[2][2];
+    array[0][0] = "a";
+    array[0][1] = "b";
+    array[1][0] = "c";
+    array[1][1] = "d";
+    for(String[] a : array){
+      for(String b : a){
+        System.out.println(b);
+      }
+    }
+
   }
 }
