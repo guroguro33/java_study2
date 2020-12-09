@@ -3,6 +3,7 @@ package jp.learning.se11_7;
 import java.util.ArrayList;
 
 public class Main {
+  public static final int length = 3;
   public static void main(String[] args){
     try(Sample s = new Sample()){
       throw new Exception();
@@ -15,5 +16,20 @@ public class Main {
     // 534ページ
     var list = new ArrayList<>();
     list.forEach(val -> System.out.println(val));
+
+    // 548ページ
+    int[] array = new int[length];
+    for (int i = 0; i < 3; i++){
+      System.out.println(array[i]);
+    }
+
+    Integer a = new Integer(1);
+    int b = 1;
+    System.out.println(a + b);
+
+    Integer[] array2 = new Integer[length];
+    for (int i = 0; i < 3; i++){
+      System.out.println(array2[i]);
+    }
   }
 }
