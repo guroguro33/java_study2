@@ -1,6 +1,8 @@
 package jp.learning.se11_7;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import static java.time.DayOfWeek.*;
 
 public class Main {
   public static final int length = 3;
@@ -30,6 +32,20 @@ public class Main {
     Integer[] array2 = new Integer[length];
     for (int i = 0; i < 3; i++){
       System.out.println(array2[i]);
+    }
+
+    // 403ページ
+    var today = LocalDate.now().with(MONDAY).getDayOfWeek();
+    System.out.println(today);
+    switch(today){
+      case SUNDAY:
+      case SATURDAY:
+        System.out.println("weekend");
+        break;
+      case MONDAY:
+          FRIDAY: System.out.println("working");
+      default:
+        System.out.println("other");
     }
   }
 }
