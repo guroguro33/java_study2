@@ -2,6 +2,8 @@ package jp.learning.se11_7;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import static java.time.DayOfWeek.*;
 
 public class Main {
@@ -47,5 +49,11 @@ public class Main {
       default:
         System.out.println("other");
     }
+
+    var alphabet = new ArrayList<>(
+            Arrays.asList(new String[]{"A", "B", "C", "D", "E"})
+    );
+    alphabet.sort((var c, var d) -> -c.compareTo(d));
+    alphabet.forEach(System.out::println);
   }
 }
